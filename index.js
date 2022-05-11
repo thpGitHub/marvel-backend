@@ -2,6 +2,8 @@ const { default: axios } = require("axios");
 const express = require("express");
 const app = express();
 
+const PORT = process.env.PORT || 4000;
+
 require('dotenv').config();
 
 app.get("/", async (req, res) => {
@@ -15,6 +17,6 @@ app.get("/", async (req, res) => {
 //MARVEL_API_KEY
 // process.env.PORT
 
-app.listen(4000, () => {
+app.listen(PORT, () => {
   console.log("Server has started");
 });
