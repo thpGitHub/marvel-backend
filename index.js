@@ -1,6 +1,9 @@
 const { default: axios } = require("axios");
 const express = require("express");
+const cors = require("cors");
+
 const app = express();
+app.use(cors());
 
 const PORT = process.env.PORT || 4000;
 
@@ -20,3 +23,7 @@ app.get("/", async (req, res) => {
 app.listen(PORT, () => {
   console.log("Server has started");
 });
+
+
+
+
